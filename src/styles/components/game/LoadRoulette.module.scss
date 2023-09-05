@@ -1,0 +1,49 @@
+.loadRouletteContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+
+  img {
+    top: 32px;
+    right: 16px;
+    filter: drop-shadow(2px 4px 6px black);
+  }
+
+  .spinButton {
+    cursor: pointer;
+    background: #fbbf24;
+    color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 997;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0.2em 0.2em 1rem 0 rgba(255,255,255,0.25),
+                inset -0.2em -0.2em 1rem 0 rgba(0,0,0,0.2), 
+                0 2px 16px 8px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    transition: opacity 0.5s;
+
+    &:active {
+      background: #f59e0b;
+    }
+    &.btnDisabled {
+      // background: #BDBDBD;
+      // color: #9e9e9e;
+      box-shadow: none;
+      font-weight: 400;
+      font-size: 1rem;
+      text-transform: lowercase;
+      opacity: 0;
+    }
+  }
+}
